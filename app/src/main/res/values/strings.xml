@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Unity3DQuiz</string>
+    <string name="mainHeader">Please choose a quiz.</string>
+    <string name="quizButton1">Unity3D Basics</string>
+    <string name="quizButton2">Unity3D Intermediate</string>
+    <string name="quizButton3">Unity3D 2D Basics</string>
+    <string name="quizButton4">Unity3D 2D Intermediate</string>
+
+    <string name="question1">Question 1</string>
+    <string name="question2">Question 2</string>
+    <string name="question3">Question 3</string>
+    <string name="question4">Question 4</string>
+    <string name="question5">Question 5</string>
+    <string name="question6">Question 6</string>
+    <string name="question7">Question 7</string>
+    <string name="question8">Question 8</string>
+    <string name="question9">Question 9</string>
+    <string name="question10">Question 10</string>
+</resources>
