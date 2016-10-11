@@ -5,15 +5,45 @@
     <string name="quizButton2">Unity3D Intermediate</string>
     <string name="quizButton3">Unity3D 2D Basics</string>
     <string name="quizButton4">Unity3D 2D Intermediate</string>
+    <string name="gradeButton">Submit Answers</string>
 
-    <string name="question1">Question 1</string>
-    <string name="question2">Question 2</string>
-    <string name="question3">Question 3</string>
-    <string name="question4">Question 4</string>
-    <string name="question5">Question 5</string>
-    <string name="question6">Question 6</string>
-    <string name="question7">Question 7</string>
-    <string name="question8">Question 8</string>
-    <string name="question9">Question 9</string>
-    <string name="question10">Question 10</string>
+    <string name="question1">Information about a selected game object appears in what tab?</string>
+    <string name="hierarchyRadio">Hierarchy</string>
+    <string name="inspectorRadio">Inspector</string>
+    <string name="projectRadio">Project</string>
+    <string name="sceneRadio">Scene</string>
+
+    <string name="question2">Which of the following are valid ways to create a game object?</string>
+    <string name="projectCheckbox">Left Clicking Create in the Project tab</string>
+    <string name="hierarchyCheckbox">Left Clicking Create in the Hierarchy tab</string>
+    <string name="gameObjectsMenuCheckbox">Inside the Game Objects menu</string>
+    <string name="sceneClickCheckbox">By right-clicking inside the Scene tab</string>
+
+    <string name="question3">Which component do all game objects have?</string>
+    <string name="question3Answer">Transform</string>
+
+    <string name="question4">What component enable Unity\'s physics engine?</string>
+    <string name="question4Answer">Rigidbody</string>
+
+    <string name="question5">What languages can be used for scripting in Unity?</string>
+    <string name="question5JavascriptCheckbox">Javascript</string>
+    <string name="question5CSharpCheckbox">C#</string>
+    <string name="question5CPlusPlusCheckbox">C++</string>
+    <string name="question5PythonCheckbox">Python</string>
+
+    <string name="question6">What class are most C# scripts derived from? (Case Sensitive)</string>
+    <string name="question6answer">MonoBehavior</string>
+
+    <string name="question7">You can create an empty game object.</string>
+
+    <string name="question8">What are the properties of the Transform component?</string>
+    <string name="question8answer">Position, Rotation, Scale</string>
+
+    <string name="question9">A scene must have an audio component to play.</string>
+
+    <string name="question10">It is impossible to change the target build platform once the project is created.</string>
+
+    <string name="trueRadio">True</string>
+    <string name="falseRadio">False</string>
+    <string name="inputHint">Answer</string>
 </resources>

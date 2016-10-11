@@ -15,13 +15,43 @@
         <item name="android:textSize">25sp</item>
         <item name="android:background">@color/colorAccent</item>
         <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="textStyle">
         <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:layout_margin">5dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
     </style>
 
+    <style name="radioButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">onRadioButtonClicked</item>
+    </style>
+
+    <style name="checkboxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">onCheckboxClicked</item>
+    </style>
+
+    <style name="editTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:hint">@string/inputHint</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:alpha">.3</item>
+    </style>
+
+    <style name="linearViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>
