@@ -14,10 +14,10 @@
     <string name="sceneRadio">Scene</string>
 
     <string name="question2">Which of the following are valid ways to create a game object?</string>
-    <string name="projectCheckbox">Left Clicking Create in the Project tab</string>
-    <string name="hierarchyCheckbox">Left Clicking Create in the Hierarchy tab</string>
+    <string name="projectCheckbox">Left clicking Create in the Project tab</string>
+    <string name="hierarchyCheckbox">Left clicking Create in the Hierarchy tab</string>
     <string name="gameObjectsMenuCheckbox">Inside the Game Objects menu</string>
-    <string name="sceneClickCheckbox">By right-clicking inside the Scene tab</string>
+    <string name="sceneClickCheckbox">By right clicking inside the Scene tab</string>
 
     <string name="question3">Which component do all game objects have?</string>
     <string name="question3Answer">Transform</string>
