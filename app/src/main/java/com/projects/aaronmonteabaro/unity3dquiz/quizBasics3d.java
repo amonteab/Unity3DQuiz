@@ -6,14 +6,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.List;
 
 public class quizBasics3d extends AppCompatActivity {
-
-    private float mQuestion2Total = 0f;
-    private float mQuestion5Total = 0f;
 
     private boolean mQuestion1Correct = false;
     private boolean mQuestion7Correct = false;
@@ -21,6 +19,9 @@ public class quizBasics3d extends AppCompatActivity {
     private boolean mQuestion10Correct = false;
 
     private boolean[] mQuestion2Correct = new boolean[] {false, false, true, true};
+    private boolean[] mQuestion5Correct = new boolean[] {true, false, false, true};
+
+    private String[] mQuestion8Answers = new String[] {"position", "rotation", "scale"} ;
 
     private String mQuestion3Response;
     private String mQuestion4Response;
@@ -122,19 +123,39 @@ public class quizBasics3d extends AppCompatActivity {
                 break;
 
             case R.id.question5CPlusPlusCheckbox:
-                //
+                if(checked) {
+                    mQuestion5Correct[0] = false;
+                }
+                else {
+                    mQuestion5Correct[0] = true;
+                }
                 break;
 
             case R.id.question5CSharpCheckbox:
-                //
+                if(checked) {
+                    mQuestion5Correct[1] = true;
+                }
+                else {
+                    mQuestion5Correct[1]= false;
+                }
                 break;
 
             case R.id.question5JavascriptCheckbox:
-                //
+                if(checked) {
+                    mQuestion5Correct[2] = true;
+                }
+                else {
+                    mQuestion5Correct[2] = false;
+                }
                 break;
 
             case R.id.question5PythonCheckbox:
-                //
+                if(checked) {
+                    mQuestion5Correct[3] = false;
+                }
+                else {
+                    mQuestion5Correct[3] = true;
+                }
                 break;
         }
 
@@ -142,6 +163,9 @@ public class quizBasics3d extends AppCompatActivity {
 
     public void gradeQuiz(View view) {
         setTypedAnswers();
+        float mQuestion2Total = 0f;
+        float mQuestion5Total = 0f;
+        int mQuestion8Total = 0;
         mTotal = 0f;
 
         if(mQuestion1Correct) {
@@ -150,7 +174,6 @@ public class quizBasics3d extends AppCompatActivity {
 
         mQuestion2Total = 0f;
         for(boolean b : mQuestion2Correct) {
-            Log.i("b is ", "" + b);
             if(b) {
                 mQuestion2Total += .25;
             }
@@ -158,8 +181,6 @@ public class quizBasics3d extends AppCompatActivity {
                 mQuestion2Total -= .25;
             }
         }
-        Log.i("t is ", "" + mQuestion2Total);
-
 
         if(mQuestion2Total >= 0) {
             mTotal += mQuestion2Total;
@@ -173,6 +194,20 @@ public class quizBasics3d extends AppCompatActivity {
             mTotal += 1f;
         }
 
+        mQuestion5Total = 0f;
+        for(boolean b : mQuestion5Correct) {
+            if(b) {
+                mQuestion5Total += .25f;
+            }
+            else {
+                mQuestion5Total -= .25f;
+            }
+        }
+
+        if(mQuestion5Total >= 0) {
+            mTotal += mQuestion5Total;
+        }
+
         if(mQuestion6Response.equals("MonoBehavior")) {
             mTotal += 1f;
         }
@@ -181,7 +216,16 @@ public class quizBasics3d extends AppCompatActivity {
             mTotal += 1f;
         }
 
+        for(int i = 0; i < 3; i++) {
+            Log.i("number i is ", "" + i);
+            if(mQuestion8Response.contains(mQuestion8Answers[i])) {
+                mQuestion8Total += 1;
+            }
 
+            if(mQuestion8Total >= 3) {
+                mTotal += 1f;
+            }
+        }
 
         if(mQuestion9Correct) {
             mTotal += 1f;
@@ -191,15 +235,17 @@ public class quizBasics3d extends AppCompatActivity {
             mTotal += 1f;
         }
 
-
-        Log.i("mainactivity", "Total: " + mTotal);
-
+        displayScore(mTotal);
     }
 
     private void setTypedAnswers() {
         mQuestion3Response = ((EditText)findViewById(R.id.question3Input)).getText().toString();
         mQuestion4Response = ((EditText)findViewById(R.id.question4Input)).getText().toString();
         mQuestion6Response = ((EditText)findViewById(R.id.question6Input)).getText().toString();
-        mQuestion8Response = ((EditText)findViewById(R.id.question8Input)).getText().toString();
+        mQuestion8Response = ((EditText)findViewById(R.id.question8Input)).getText().toString().toLowerCase();
+    }
+
+    private void displayScore(Float total) {
+        Toast.makeText(getApplicationContext(), "Your score is " + String.format("%.0f",(total * 10)) + " out of 100!", Toast.LENGTH_SHORT).show();
     }
 }

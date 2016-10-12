@@ -36,8 +36,7 @@
 
     <string name="question7">You can create an empty game object.</string>
 
-    <string name="question8">What are the properties of the Transform component?</string>
-    <string name="question8answer">Position, Rotation, Scale</string>
+    <string name="question8">What are the properties of the Transform component? (Separate by comma)</string>
 
     <string name="question9">A scene must have an audio component to play.</string>
 
